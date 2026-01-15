@@ -1,7 +1,7 @@
 ﻿import React from "react";
 import {navLinks} from "@/data/links";
 import Link from "next/link";
-import HeaderMobileOverlay from "@/components/Header/HeaderMobileOverlay";
+import HeaderMobileOverlay from "@/components/sections/Header/HeaderMobileOverlay";
 
 type HeaderMobileMenuProps = {
     isOpen: boolean;

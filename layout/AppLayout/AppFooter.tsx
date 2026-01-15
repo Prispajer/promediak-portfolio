@@ -1,4 +1,4 @@
-import FooterContainer from "@/components/Footer/FooterContainer";
+import FooterContainer from "@/components/sections/Footer/FooterContainer";
 
 
 export default function AppFooter() {

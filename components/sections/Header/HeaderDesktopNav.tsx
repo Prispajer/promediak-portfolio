@@ -1,8 +1,8 @@
 ﻿import React from "react";
-import Logo from "@/components/Shared/Logo";
+import Logo from "@/components/common/Logo";
 import {navLinks} from "@/data/links";
 import Link from "next/link";
-import HeaderMobileToggle from "@/components/Header/HeaderMobileToggle";
+import HeaderMobileToggle from "@/components/sections/Header/HeaderMobileToggle";
 
 type HeaderDesktopNavProps = {
     isOpen: boolean;

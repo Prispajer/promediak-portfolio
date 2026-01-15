@@ -1,6 +1,6 @@
 ﻿"use client"
 
-import HeaderContainer from "@/components/Header/HeaderContainer";
+import HeaderContainer from "@/components/sections/Header/HeaderContainer";
 
 export default function AppHeader () {
     return (

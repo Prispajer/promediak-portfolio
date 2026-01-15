@@ -1,7 +1,7 @@
 import React from "react";
-import HeaderDesktopNav from "@/components/Header/HeaderDesktopNav";
-import HeaderMobileMenu from "@/components/Header/HeaderMobileMenu";
-import HeaderMobileOverlay from "@/components/Header/HeaderMobileOverlay";
+import HeaderDesktopNav from "@/components/sections/Header/HeaderDesktopNav";
+import HeaderMobileMenu from "@/components/sections/Header/HeaderMobileMenu";
+import HeaderMobileOverlay from "@/components/sections/Header/HeaderMobileOverlay";
 
 const HeaderContainer = () => {
     const [isOpen, setIsOpen] = React.useState(false);

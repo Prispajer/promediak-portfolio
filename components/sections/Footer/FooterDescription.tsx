@@ -1,4 +1,4 @@
-﻿import Logo from "@/components/Shared/Logo";
+﻿import Logo from "@/components/common/Logo";
 
 const FooterDescription = () => {
     return (

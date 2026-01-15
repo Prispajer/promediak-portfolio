@@ -1,7 +1,7 @@
-﻿import FooterDescription from "@/components/Footer/FooterDescription";
-import FooterLinks from "@/components/Footer/FooterLinks";
-import FooterContact from "@/components/Footer/FooterContact";
-import FooterCopyright from "@/components/Footer/FooterCopyright";
+﻿import FooterDescription from "@/components/sections/Footer/FooterDescription";
+import FooterLinks from "@/components/sections/Footer/FooterLinks";
+import FooterContact from "@/components/sections/Footer/FooterContact";
+import FooterCopyright from "@/components/sections/Footer/FooterCopyright";
 
 const FooterContainer = () => {
     return (
