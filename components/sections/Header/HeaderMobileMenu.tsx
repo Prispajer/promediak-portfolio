@@ -2,6 +2,7 @@
 import {navLinks} from "@/data/links";
 import Link from "next/link";
 import HeaderMobileOverlay from "@/components/sections/Header/HeaderMobileOverlay";
+import { usePathname } from 'next/navigation';
 
 type HeaderMobileMenuProps = {
     isOpen: boolean;
@@ -9,10 +10,12 @@ type HeaderMobileMenuProps = {
 }
 
 const HeaderMobileMenu = ({isOpen, setIsOpen} : HeaderMobileMenuProps)=> {
+    const pathname = usePathname();
+
     return (
         <div
-            className={`absolute right-0 top-0 h-full w-full max-w-md bg-card border-l border-border/50 transition-transform duration-500 ${
-                isOpen ? "translate-x-0" : "translate-x-full"
+            className={`h-full w-full max-w-md bg-card border-l border-border/50 transition-transform duration-500 ${
+                isOpen ? "fixed translate-x- right-0 top-0" : "hidden"
             }`}
         >
             <div className="flex flex-col h-full pt-24 px-8">
@@ -31,7 +34,7 @@ const HeaderMobileMenu = ({isOpen, setIsOpen} : HeaderMobileMenuProps)=> {
                                 <Link
                                     href={link.path}
                                     className={`block text-2xl font-display tracking-wide transition-colors hover:text-accent ${
-                                        location.pathname === link.path
+                                        pathname === link.path
                                             ? "text-accent"
                                             : "text-foreground/80"
                                     }`}

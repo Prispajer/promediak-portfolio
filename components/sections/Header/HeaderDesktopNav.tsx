@@ -3,6 +3,8 @@ import Logo from "@/components/common/Logo";
 import {navLinks} from "@/data/links";
 import Link from "next/link";
 import HeaderMobileToggle from "@/components/sections/Header/HeaderMobileToggle";
+import { usePathname } from 'next/navigation';
+
 
 type HeaderDesktopNavProps = {
     isOpen: boolean;
@@ -10,6 +12,8 @@ type HeaderDesktopNavProps = {
 }
 
 const HeaderDesktopNav = ({isOpen, setIsOpen} : HeaderDesktopNavProps) => {
+    const pathname = usePathname();
+
     return (
         <div className="flex justify-between items-center">
             <Logo variant="full" />
@@ -18,8 +22,8 @@ const HeaderDesktopNav = ({isOpen, setIsOpen} : HeaderDesktopNavProps) => {
                     <li key={link.path}>
                         <Link
                             href={link.path}
-                            className={`nav-link text-sm font-body font-light tracking-widest uppercase ${
-                                location.pathname === link.path ? "active text-foreground" : ""
+                            className={`text-xl font-[400] tracking-widest ${
+                                pathname === link.path ? "nav-item-active text-foreground" : "nav-item text-foreground/80"
                             }`}
                         >
                             {link.name}

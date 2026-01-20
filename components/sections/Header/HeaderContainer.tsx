@@ -20,7 +20,7 @@ const HeaderContainer = () => {
     }, [isOpen])
 
     return (
-            <div className="fixed inset-0 z-40 transition-all duration-500 opacity-100 pointer-events-auto">
+            <div className="w-full">
                  <HeaderMobileOverlay isOpen={isOpen} setIsOpen={setIsOpen} />
                  <nav className="container mx-auto px-6 py-4">
                     <HeaderDesktopNav isOpen={isOpen} setIsOpen={setIsOpen} />
