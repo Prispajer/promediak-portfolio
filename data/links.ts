@@ -14,10 +14,10 @@
 
 export const navLinks = [
     {name: "Strona Główna", path: "/"},
-    {name: "Fotografia", path: "/fotografia"},
-    {name: "Film", path: "/film"},
-    {name: "O Nas", path: "/o-nas"},
-    {name: "Kontakt", path: "/kontakt"},
+    {name: "Fotografia", path: "/portfolio/photo"},
+    {name: "Film", path: "/portfolio/video"},
+    {name: "O Nas", path: "/about"},
+    {name: "Kontakt", path: "/contact"},
 ] as const;
 
 export const footerLinks = [
