@@ -21,7 +21,7 @@ const HeaderDesktopNav = ({ isOpen, setIsOpen }: HeaderDesktopNavProps) => {
           <li key={link.path}>
             <Link
               href={link.path}
-              className={`text-xl font-[400] tracking-widest ${
+              className={`text-lg font-[400] tracking-wide uppercase ${
                 pathname === link.path
                   ? "nav-item-active text-foreground"
                   : "nav-item text-foreground/80"

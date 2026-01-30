@@ -13,7 +13,7 @@ const HeaderMobileOverlay = ({
     <div
       className={`fixed inset-0 transition-all duration-500 lg:hidden ${
         isOpen
-          ? "pointer-events-auto opacity-100"
+          ? "pointer-events-none opacity-100"
           : "pointer-events-none opacity-0"
       }`}
     >

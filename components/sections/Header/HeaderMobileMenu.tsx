@@ -13,7 +13,7 @@ const HeaderMobileMenu = ({ isOpen, setIsOpen }: HeaderMobileMenuProps) => {
 
   return (
     <div
-      className={`bg-card border-border/50 h-full w-full max-w-md border-l transition-transform duration-500 ${
+      className={`bg-card border-border/50 h-full w-full max-w-md border-l duration-500 ${
         isOpen ? "translate-x- fixed top-0 right-0" : "hidden"
       }`}
     >
@@ -23,7 +23,7 @@ const HeaderMobileMenu = ({ isOpen, setIsOpen }: HeaderMobileMenuProps) => {
             {navLinks.map((link, index) => (
               <li
                 key={link.path}
-                className={`transform transition-all duration-500 ${
+                className={`transition-all duration-500 ${
                   isOpen
                     ? "translate-x-0 opacity-100"
                     : "translate-x-8 opacity-0"
@@ -33,7 +33,7 @@ const HeaderMobileMenu = ({ isOpen, setIsOpen }: HeaderMobileMenuProps) => {
               >
                 <Link
                   href={link.path}
-                  className={`font-display hover:text-accent block text-2xl tracking-wide transition-colors ${
+                  className={`font-display hover:text-accent block text-xl font-[500] tracking-wide uppercase transition-colors ${
                     pathname === link.path
                       ? "text-accent"
                       : "text-foreground/80"
@@ -50,7 +50,7 @@ const HeaderMobileMenu = ({ isOpen, setIsOpen }: HeaderMobileMenuProps) => {
             Film & Fotografia Profesjonalna
           </p>
           <p className="text-accent font-body mt-2 text-sm">
-            kontakt@promediak.pl
+            aneta.koziel@op.pl
           </p>
         </div>
       </div>
