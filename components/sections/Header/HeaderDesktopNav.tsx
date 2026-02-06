@@ -15,7 +15,7 @@ const HeaderDesktopNav = ({ isOpen, setIsOpen }: HeaderDesktopNavProps) => {
 
   return (
     <div className="flex items-center justify-between">
-      <Logo variant="full" />
+      <Logo />
       <ul className="hidden items-center gap-8 lg:flex">
         {navLinks.map((link) => (
           <li key={link.path}>

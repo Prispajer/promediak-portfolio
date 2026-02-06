@@ -1,11 +1,11 @@
 ﻿const FooterCopyright = () => {
-    return (
-        <div className="mt-16 pt-8 border-t border-border/20 text-center">
-            <p className="text-sm text-muted-foreground font-body">
-                © {new Date().getFullYear()} ProMediak. Wszystkie prawa zastrzeżone.
-            </p>
-        </div>
-    )
-}
+  return (
+    <div className="border-border/20 mt-16 border-t pt-8 pb-8 text-center">
+      <p className="text-muted-foreground font-body cursor-default text-sm">
+        © {new Date().getFullYear()} ProMediak. Wszystkie prawa zastrzeżone.
+      </p>
+    </div>
+  );
+};
 
 export default FooterCopyright;
