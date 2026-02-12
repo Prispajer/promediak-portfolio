@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import ParallaxSection from "@/components/common/ParallaxSection";
-import wedding2 from "@/public/images/portfolio-wedding-2.jpg";
+import parallax from "@/public/images/7.jpg";
 
 const QuoteContainer = () => {
   return (
-    <ParallaxSection backgroundImage={wedding2} height="50vh">
+    <ParallaxSection backgroundImage={parallax} height="50vh">
       <div className="container mx-auto px-6 py-20">
         <motion.blockquote
           initial={{ opacity: 0, scale: 0.95 }}

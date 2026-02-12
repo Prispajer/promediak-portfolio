@@ -9,24 +9,24 @@ const HeroButtons = () => {
         asChild
         variant="outline"
         size="xl"
-        className="group cursor-pointer"
+        className="group cursor-pointer sm:min-w-[280px]"
       >
         <Link href="/portfolio/photo" className="flex items-center gap-2">
-          <span>Zobacz Portfolio</span>
+          <span className="tracking-widest">ZOBACZ PORTFOLIO</span>
         </Link>
       </Button>
       <Button
         asChild
         variant="ghost"
         size="xl"
-        className="group cursor-pointer"
+        className="group cursor-pointer sm:min-w-[280px]"
       >
         <Link href="/portfolio/video" className="flex items-center gap-2">
           <Play
             size={18}
             className="group-hover:text-accent transition-colors"
           />
-          <span>Obejrzyj Filmy</span>
+          <span className="tracking-widest">OBEJRZYJ FILMY</span>
         </Link>
       </Button>
     </div>
