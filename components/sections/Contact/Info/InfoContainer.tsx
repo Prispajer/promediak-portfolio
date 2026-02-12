@@ -15,10 +15,10 @@ const InfoContainer = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="font-display text-foreground mb-4 text-2xl md:text-3xl">
+          <p className="font-headers text-foreground mb-4 text-2xl md:text-3xl">
             Dojeżdżamy w każdy zakątek Polski
           </p>
-          <p className="body-text">
+          <p className="text-muted-foreground">
             Nie ograniczamy się — zrealizujemy Wasz projekt gdziekolwiek
             jesteście
           </p>

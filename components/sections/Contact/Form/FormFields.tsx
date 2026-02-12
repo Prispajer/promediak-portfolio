@@ -117,7 +117,7 @@ const FormFields = ({
         <Button
           type="submit"
           size="lg"
-          className="glow-emerald w-full md:w-auto"
+          className="w-full cursor-pointer shadow-[0_0_8px_var(--color-shadow-glow)] md:w-auto"
         >
           Wyślij Wiadomość
           <Send className="ml-2" size={18} />

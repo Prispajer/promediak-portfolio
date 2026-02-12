@@ -1,5 +1,5 @@
 ﻿import { siteConfig } from "@/data/links";
-import { Clock, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { Clock, Facebook, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -82,13 +82,13 @@ const FormInfo = () => {
         </h3>
         <div className="flex gap-4">
           <a
-            href={siteConfig.social.instagram}
+            href={siteConfig.social.facebook}
             target="_blank"
             rel="noopener noreferrer"
             className="border-border/50 hover:border-accent hover:text-accent flex h-12 w-12 items-center justify-center border transition-all"
             aria-label="Instagram ProMediak"
           >
-            <Instagram size={20} />
+            <Facebook size={20} />
           </a>
           <a
             href={siteConfig.social.youtube}

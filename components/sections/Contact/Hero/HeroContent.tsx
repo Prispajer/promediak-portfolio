@@ -13,10 +13,8 @@ const HeroContent = () => {
         className="mx-auto max-w-3xl px-6 text-center"
       >
         <div className="via-accent mx-auto mb-8 h-16 w-px bg-gradient-to-b from-transparent to-transparent" />
-        <h1 className="section-heading text-foreground mb-6 text-4xl md:text-5xl lg:text-6xl">
-          Kontakt
-        </h1>
-        <p className="body-text text-lg">
+        <h1 className="animate-fade-up hero-title mb-6">Kontakt</h1>
+        <p className="hero-subtitle">
           Masz pytania lub chcesz omówić swój projekt? Napisz do nas — chętnie
           odpowiemy na wszystkie pytania.
         </p>
