@@ -1,4 +1,6 @@
-﻿import React from "react";
+﻿"use client";
+
+import React from "react";
 import Logo from "@/components/common/Logo";
 import { navLinks } from "@/data/links";
 import Link from "next/link";
@@ -21,7 +23,7 @@ const HeaderDesktopNav = ({ isOpen, setIsOpen }: HeaderDesktopNavProps) => {
           <li key={link.path}>
             <Link
               href={link.path}
-              className={`text-lg font-[400] tracking-wide uppercase ${
+              className={`text-lg tracking-wide uppercase ${
                 pathname === link.path
                   ? "nav-item-active text-foreground"
                   : "nav-item text-foreground/80"

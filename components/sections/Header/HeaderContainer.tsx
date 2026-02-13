@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import HeaderDesktopNav from "@/components/sections/Header/HeaderDesktopNav";
 import HeaderMobileMenu from "@/components/sections/Header/HeaderMobileMenu";

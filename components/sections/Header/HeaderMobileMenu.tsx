@@ -1,4 +1,6 @@
-﻿import React from "react";
+﻿"use client";
+
+import React from "react";
 import { navLinks } from "@/data/links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -33,10 +35,10 @@ const HeaderMobileMenu = ({ isOpen, setIsOpen }: HeaderMobileMenuProps) => {
               >
                 <Link
                   href={link.path}
-                  className={`font-display hover:text-accent block text-xl font-[500] tracking-wide uppercase transition-colors ${
+                  className={`hover:text-accent text-xl tracking-wide uppercase transition-colors ${
                     pathname === link.path
-                      ? "text-accent"
-                      : "text-foreground/80"
+                      ? "nav-item-active text-foreground"
+                      : "nav-item text-foreground/80"
                   }`}
                 >
                   {link.name}
