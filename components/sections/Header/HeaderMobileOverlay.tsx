@@ -11,10 +11,9 @@ const HeaderMobileOverlay = ({
 }: HeaderMobileOverlayProps) => {
   return (
     <div
-      className={`fixed inset-0 transition-all duration-500 lg:hidden ${
-        isOpen
-          ? "pointer-events-none opacity-100"
-          : "pointer-events-none opacity-0"
+      aria-hidden="true"
+      className={`fixed inset-0 transition-all duration-500 ${
+        isOpen ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
     >
       <div

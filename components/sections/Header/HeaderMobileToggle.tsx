@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 type HeaderDesktopNavProps = {
   isOpen: boolean;
@@ -11,13 +11,11 @@ const HeaderMobileToggle = ({ isOpen, setIsOpen }: HeaderDesktopNavProps) => {
     <button
       onClick={() => setIsOpen(!isOpen)}
       className="text-foreground hover:text-accent p-2 transition-colors lg:hidden"
-      aria-label="Menu"
+      aria-expanded={isOpen}
+      aria-haspopup="true"
+      aria-label={isOpen ? "Zamknij menu" : "Otwórz menu"}
     >
-      {isOpen ? (
-        <X className="absolute top-7 right-10 z-10" size={24} />
-      ) : (
-        <Menu size={24} />
-      )}
+      {!isOpen && <Menu size={24} aria-hidden="true" />}
     </button>
   );
 };
