@@ -1,20 +1,20 @@
 ﻿import SectionTitle from "@/components/common/SectionTitle";
-import AudienceList from "@/components/sections/Home/Audience/AudienceList";
-import AudienceBackground from "@/components/sections/Home/Audience/AudienceBackground";
+import PhilosophyList from "@/components/sections/Home/Philosophy/PhilosophyList";
+import PhilosophyOverlay from "@/components/sections/Home/Philosophy/PhilosophyOverlay";
 
-const AudienceContainer = () => {
+const PhilosophyContainer = () => {
   return (
     <section className="relative overflow-hidden py-24 md:py-32">
-      <AudienceBackground />
+      <PhilosophyOverlay />
       <div className="relative container mx-auto px-6">
         <SectionTitle
           title="Filozofia pracy"
           subtitle="Trzy filary, które definiują styl i klimat naszej pracy"
         />
-        <AudienceList />
+        <PhilosophyList />
       </div>
     </section>
   );
 };
 
-export default AudienceContainer;
+export default PhilosophyContainer;
