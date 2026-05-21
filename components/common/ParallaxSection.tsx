@@ -1,11 +1,13 @@
 ﻿import { ReactNode } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import { StaticImageData } from "next/image";
 
 interface ParallaxSectionProps {
   backgroundImage: StaticImageData;
   children: ReactNode;
+  ariaLabel: string;
   overlay?: boolean;
   height?: string;
   speed?: number;
@@ -14,6 +16,7 @@ interface ParallaxSectionProps {
 const ParallaxSection = ({
   backgroundImage,
   children,
+  ariaLabel,
   overlay = true,
   height = "60vh",
   speed = 0.5,
@@ -30,21 +33,32 @@ const ParallaxSection = ({
     <section
       ref={ref}
       className="relative overflow-hidden"
-      style={{ minHeight: height }}
+      style={{ height: height }}
+      aria-label={ariaLabel}
     >
       <motion.div
-        className="absolute inset-0 -top-[10%] h-[120%] w-full bg-cover bg-fixed bg-center"
+        className="absolute inset-0 -top-[10%] h-[120%] w-full"
         style={{
-          backgroundImage: `url(${backgroundImage.src})`,
           y,
         }}
-      />
-
+      >
+        <Image
+          src={backgroundImage}
+          alt=""
+          fill
+          priority={false}
+          sizes="100vw"
+          className="object-cover object-center"
+          quality={90}
+        />
+      </motion.div>
       {overlay && (
-        <div className="bg-background/70 absolute inset-0 backdrop-blur-[2px]" />
+        <div
+          aria-hidden="true"
+          className="bg-background/70 absolute inset-0 backdrop-blur-[2px]"
+        />
       )}
-
-      <div className="relative z-10 flex h-full items-center justify-center">
+      <div className="relative z-10 flex h-full cursor-default items-center justify-center">
         {children}
       </div>
     </section>
