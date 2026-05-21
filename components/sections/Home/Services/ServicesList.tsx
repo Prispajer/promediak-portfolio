@@ -17,11 +17,15 @@ const ServicesList = () => {
           viewport={{ once: true }}
           className="group card-premium border-border/30 hover:border-accent/50 border p-8 transition-all duration-500"
         >
-          <service.icon className="text-accent mb-6 h-10 w-10" />
-          <h3 className="font-headers text-foreground mb-4 cursor-default text-2xl">
+          <service.icon
+            className="text-accent mb-6 h-10 w-10"
+            aria-label={`Ikona ${service.title}`}
+            role="img"
+          />
+          <h3 className="font-headers text-foreground mb-4 cursor-default text-2xl font-semibold">
             {service.title}
           </h3>
-          <p className="font-display mb-6 cursor-default">
+          <p className="font-body text-foreground mb-6 cursor-default">
             {service.description}
           </p>
           <Link

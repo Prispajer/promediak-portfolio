@@ -15,7 +15,11 @@ const StatsList = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <stat.icon className="text-accent mx-auto mb-3 h-8 w-8 cursor-default" />
+          <stat.icon
+            className="text-accent mx-auto mb-3 h-8 w-8 cursor-default"
+            aria-label={`Ikona: ${stat.label}`}
+            role="img"
+          />
           <p className="font-display text-foreground mb-1 cursor-default text-4xl">
             {stat.number}
           </p>

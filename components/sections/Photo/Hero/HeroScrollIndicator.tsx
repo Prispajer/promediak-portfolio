@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 
 const HeroScrollIndicator = () => {
   return (
-    <div className="flex items-center gap-3">
+    <div
+      role="img"
+      aria-label="Przewiń w dół"
+      className="flex items-center gap-3 self-start"
+    >
       <span className="text-foreground/40 hidden text-xs tracking-wider uppercase sm:block">
         Przewiń
       </span>

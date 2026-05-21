@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 const CtaContainer = () => {
   return (
-    <section className="py-20">
+    <section className="py-20" aria-label="Zamówienie sesji">
       <div className="container mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,14 +15,19 @@ const CtaContainer = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="cta-title mb-4">Zainteresowany sesją?</h2>
+          <h2 id="cta-heading" className="cta-title mb-4">
+            Zainteresowany sesją?
+          </h2>
           <p className="cta-subtitle mb-8">
             Skontaktuj się i omówmy szczegóły Twojego projektu
           </p>
           <Button asChild variant="outline" size="lg">
-            <Link href="/contact">
+            <Link
+              href="/contact"
+              aria-label="Przejdź do formularza kontaktowego, aby umówić sesję"
+            >
               Umów Sesję
-              <ArrowRight className="ml-2" size={18} />
+              <ArrowRight className="ml-2" size={18} aria-hidden="true" />
             </Link>
           </Button>
         </motion.div>

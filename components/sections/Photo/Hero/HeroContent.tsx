@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const HeroContent = () => {
-  const words = "Fotografia".split("");
+  const title: string = "Fotografia" as const;
 
   return (
     <div className="relative z-10 flex h-screen cursor-default items-center">
@@ -20,8 +20,8 @@ const HeroContent = () => {
               Profesjonalne usługi
             </span>
           </motion.div>
-          <h1 className="mb-8">
-            {words.map((word, index) => (
+          <h1 aria-label={title} className="mb-8">
+            {title.split("").map((letter, index) => (
               <motion.span
                 key={index}
                 initial={{ opacity: 0, y: 60 }}
@@ -36,7 +36,7 @@ const HeroContent = () => {
                   textShadow: "0 0 60px rgba(139, 162, 133, 0.3)",
                 }}
               >
-                {word}
+                {letter}
               </motion.span>
             ))}
           </h1>
@@ -44,7 +44,7 @@ const HeroContent = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="hero-subtitle text-foreground/70 mb-12"
+            className="hero-subtitle mb-12 text-left"
           >
             Każde zdjęcie opowiada historię. Uwieczniamy emocje, chwile i
             wspomnienia, które będą towarzyszyć Wam przez całe życie.
