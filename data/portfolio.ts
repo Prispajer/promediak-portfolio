@@ -1,61 +1,47 @@
-﻿import wedding1 from "@/assets/portfolio-wedding-1.jpg";
-import wedding2 from "@/assets/portfolio-wedding-2.jpg";
-import event1 from "@/assets/portfolio-event-1.jpg";
-import portrait1 from "@/assets/portfolio-portrait-1.jpg";
-import heroFilm from "@/assets/hero-film.jpg";
-import {StaticImageData} from "next/image";
+﻿import { PhotoItem, VideoItem } from "@/types/portfolio";
 
-export interface PortfolioItem {
-    id: string;
-    image: StaticImageData;
-    title: string;
-    category: string;
-}
+export const photoItems: PhotoItem[] = Array.from({ length: 31 }, (_, i) => ({
+  id: String(i + 1),
+  image: `/images/portfolio/${i + 1}.jpg`,
+  title: `Zdjęcie ${i + 1}`,
+  category: "Wybrane realizacje",
+}));
 
-export interface VideoProject {
-    id: string;
-    thumbnail: StaticImageData;
-    title: string;
-    category: string;
-    duration: string;
-}
-
-export const portfolioPreview: PortfolioItem[] = [
-    { id: "1", image: wedding1, title: "Ślub Anny & Marka", category: "Fotografia Ślubna" },
-    { id: "2", image: wedding2, title: "Sesja w Lesie", category: "Portret" },
-    { id: "3", image: event1, title: "Gala Firmowa", category: "Eventy" },
-    { id: "4", image: portrait1, title: "Portret Artystyczny", category: "Studio" },
-];
-
-export const photographyPortfolio: PortfolioItem[] = [
-    { id: "1", image: wedding1, title: "Ślub Anny & Marka", category: "Fotografia Ślubna" },
-    { id: "2", image: wedding2, title: "Sesja w Lesie", category: "Plener Ślubny" },
-    { id: "3", image: event1, title: "Gala Firmowa", category: "Eventy" },
-    { id: "4", image: portrait1, title: "Portret Artystyczny", category: "Studio" },
-    { id: "5", image: wedding1, title: "Ceremonia", category: "Ślub" },
-    { id: "6", image: wedding2, title: "Detale", category: "Fotografia" },
-];
-
-export const videoProjects: VideoProject[] = [
-    {
-        id: "1",
-        thumbnail: heroFilm,
-        title: "Ślub Karoliny & Piotra",
-        category: "Film Ślubny",
-        duration: "8:32",
-    },
-    {
-        id: "2",
-        thumbnail: heroFilm,
-        title: "Highlight Reel 2024",
-        category: "Showreel",
-        duration: "3:45",
-    },
-    {
-        id: "3",
-        thumbnail: heroFilm,
-        title: "Ceremonia w Górach",
-        category: "Film Ślubny",
-        duration: "12:15",
-    },
+export const videoItems: VideoItem[] = [
+  {
+    id: "BZPi0podLPo",
+    thumbnail: "https://img.youtube.com/vi/BZPi0podLPo/maxresdefault.jpg",
+    title: "Pierwsza Komunia Święta | Trailer",
+    category: "Trailer",
+  },
+  {
+    id: "Qy7w9jwO_6o",
+    thumbnail: "https://img.youtube.com/vi/Qy7w9jwO_6o/maxresdefault.jpg",
+    title: "Dagmara & Przemysław | Zakończenie Wesela na Wesoło",
+    category: "Film Ślubny",
+  },
+  {
+    id: "B_hOVrYjVWA",
+    thumbnail: "https://img.youtube.com/vi/B_hOVrYjVWA/maxresdefault.jpg",
+    title: "III LO Starachowice | Czołówka Klasy III A",
+    category: "Czołówka",
+  },
+  {
+    id: "VkiaNkcN6gs",
+    thumbnail: "https://img.youtube.com/vi/VkiaNkcN6gs/maxresdefault.jpg",
+    title: "III LO Starachowice | Czołówka Klasy III B",
+    category: "Czołówka",
+  },
+  {
+    id: "6SagEp5Ra7Q",
+    thumbnail: "https://img.youtube.com/vi/6SagEp5Ra7Q/maxresdefault.jpg",
+    title: "Studniówka III LO | Trailer",
+    category: "Trailer",
+  },
+  {
+    id: "SV5lYlSat4o",
+    thumbnail: "https://img.youtube.com/vi/SV5lYlSat4o/maxresdefault.jpg",
+    title: "Wesele w pigułce | Z Przymrużeniem Oka",
+    category: "Parodia",
+  },
 ];
