@@ -1,7 +1,7 @@
 ﻿import SectionTitle from "@/components/common/SectionTitle";
-import CategoriesList from "@/components/sections/Photo/Categories/CategoriesList";
+import ServicesList from "@/components/sections/Photo/Services/ServicesList";
 
-const CategoriesContainer = () => {
+const ServicesContainer = () => {
   return (
     <section className="bg-card py-24 md:py-32">
       <div className="container mx-auto px-6">
@@ -9,10 +9,10 @@ const CategoriesContainer = () => {
           title="Nasze Specjalizacje"
           subtitle="Oferujemy szeroki zakres usług fotograficznych"
         />
-        <CategoriesList />
+        <ServicesList />
       </div>
     </section>
   );
 };
 
-export default CategoriesContainer;
+export default ServicesContainer;
