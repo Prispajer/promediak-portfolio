@@ -1,13 +1,10 @@
-﻿import film from "@/public/images/Film.jpg";
+﻿import heroImage from "@/public/images/VideoHero.jpg";
 import ImageBackground from "@/components/common/ImageBackground";
 
 const HeroBackground = () => {
   return (
     <>
-      <ImageBackground
-        backgroundImage={film}
-        className="bg-cover bg-center bg-no-repeat"
-      >
+      <ImageBackground backgroundImage={heroImage}>
         <div className="bg-background/60 absolute inset-0" />;
       </ImageBackground>
     </>

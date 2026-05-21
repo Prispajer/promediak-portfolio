@@ -1,13 +1,10 @@
 ﻿import ImageBackground from "@/components/common/ImageBackground";
-import heroImage from "@/public/images/Hero.jpg";
+import heroImage from "@/public/images/HomeHero.jpg";
 
 const HeroBackground = () => {
   return (
     <>
-      <ImageBackground
-        backgroundImage={heroImage}
-        className="bg-cover bg-center bg-no-repeat"
-      />
+      <ImageBackground backgroundImage={heroImage} />
     </>
   );
 };

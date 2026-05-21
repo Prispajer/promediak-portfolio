@@ -1,14 +1,12 @@
-﻿import heroImage from "@/public/images/Hero.jpg";
+﻿import heroImage from "@/public/images/ContactHero.jpg";
 import React from "react";
+import ImageBackground from "@/components/common/ImageBackground";
 
 const HeroBackground = () => {
   return (
-    <div
-      className="absolute inset-0 bg-cover bg-fixed bg-center"
-      style={{ backgroundImage: `url(${heroImage.src})` }}
-    >
+    <ImageBackground backgroundImage={heroImage} isFixed={true}>
       <div className="bg-background/60 absolute inset-0" />
-    </div>
+    </ImageBackground>
   );
 };
 
