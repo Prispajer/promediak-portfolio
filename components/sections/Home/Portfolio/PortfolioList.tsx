@@ -1,36 +1,48 @@
 ﻿"use client";
 
-import { portfolioPreview } from "@/data/portfolio";
+import preview1 from "@/public/images/portfolio/20.jpg";
+import preview2 from "@/public/images/portfolio/19.jpg";
+import preview3 from "@/public/images/portfolio/15.jpg";
+import preview4 from "@/public/images/portfolio/10.jpg";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const PortfolioList = () => {
+  const previewArray = [
+    {
+      src: preview1,
+      alt: "Filmowa sesja portretowa w studio - zbliżenie na detale",
+    },
+    {
+      src: preview2,
+      alt: "Backstage z planu teledysku - profesjonalny sprzęt oświetleniowy",
+    },
+    {
+      src: preview3,
+      alt: "Dynamiczne ujęcie z drona - architektura nowoczesnego biurowca",
+    },
+    {
+      src: preview4,
+      alt: "Reportaż z wydarzenia korporacyjnego - prelegent na scenie",
+    },
+  ];
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-      {portfolioPreview.map((item, index) => (
+      {previewArray.map((image, index) => (
         <motion.div
-          key={item.id}
+          key={index}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
           viewport={{ once: true }}
-          className="group relative aspect-[4/5] cursor-pointer overflow-hidden"
+          className="aspect-[4/5] overflow-hidden"
         >
           <Image
-            src={item.image}
-            alt={item.title}
+            src={image.src}
+            alt={image.alt}
             loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="h-full w-full object-cover"
           />
-          <div className="from-background/90 via-background/20 absolute inset-0 bg-gradient-to-t to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-          <div className="absolute right-0 bottom-0 left-0 translate-y-full transform p-6 transition-transform duration-500 group-hover:translate-y-0">
-            <p className="text-accent font-body mb-2 text-xs tracking-widest uppercase">
-              {item.category}
-            </p>
-            <h3 className="font-display text-foreground text-lg">
-              {item.title}
-            </h3>
-          </div>
         </motion.div>
       ))}
     </div>
