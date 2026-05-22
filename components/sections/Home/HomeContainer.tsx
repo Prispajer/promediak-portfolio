@@ -3,8 +3,8 @@ import StatsContainer from "@/components/sections/Home/Stats/StatsContainer";
 import ServicesContainer from "@/components/sections/Home/Services/ServicesContainer";
 import PortfolioContainer from "@/components/sections/Home/Portfolio/PortfolioContainer";
 import CtaContainer from "@/components/sections/Home/Cta/CtaContainer";
-import QuoteContainer from "@/components/sections/Home/Quote/QuoteContainer";
-import AudienceContainer from "@/components/sections/Home/Audience/AudienceContainer";
+import ParallaxContainer from "@/components/sections/Home/Parallax/ParallaxContainer";
+import PhilosophyContainer from "@/components/sections/Home/Philosophy/PhilosophyContainer";
 
 const HomeContainer = () => {
   return (
@@ -12,9 +12,9 @@ const HomeContainer = () => {
       <HeroContainer />
       <StatsContainer />
       <ServicesContainer />
-      <QuoteContainer />
+      <ParallaxContainer />
       <PortfolioContainer />
-      <AudienceContainer />
+      <PhilosophyContainer />
       <CtaContainer />
     </>
   );

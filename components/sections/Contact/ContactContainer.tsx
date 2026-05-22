@@ -1,6 +1,10 @@
-﻿import HeroContainer from "@/components/sections/Contact/Hero/HeroContainer";
+﻿"use client";
+
+import React from "react";
+import HeroContainer from "@/components/sections/Contact/Hero/HeroContainer";
 import FormContainer from "@/components/sections/Contact/Form/FormContainer";
 import InfoContainer from "@/components/sections/Contact/Info/InfoContainer";
+import { Toaster } from "@/components/ui/sonner";
 
 const Contact = () => {
   return (
@@ -8,6 +12,7 @@ const Contact = () => {
       <HeroContainer />
       <FormContainer />
       <InfoContainer />
+      <Toaster />
     </>
   );
 };

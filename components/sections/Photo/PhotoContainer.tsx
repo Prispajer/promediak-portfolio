@@ -1,6 +1,6 @@
-﻿import CategoriesContainer from "@/components/sections/Photo/Categories/CategoriesContainer";
+﻿import ServicesContainer from "@/components/sections/Photo/Services/ServicesContainer";
 import HeroContainer from "@/components/sections/Photo/Hero/HeroContainer";
-import QuoteContainer from "@/components/sections/Photo/Quote/QuoteContainer";
+import ParallaxContainer from "@/components/sections/Photo/Parallax/ParallaxContainer";
 import CtaContainer from "@/components/sections/Photo/Cta/CtaContainer";
 import PortfolioContainer from "@/components/sections/Photo/Portfolio/PortfolioContainer";
 
@@ -9,8 +9,8 @@ const PhotoContainer = () => {
     <>
       <HeroContainer />
       <PortfolioContainer />
-      <QuoteContainer />
-      <CategoriesContainer />
+      <ParallaxContainer />
+      <ServicesContainer />
       <CtaContainer />
     </>
   );

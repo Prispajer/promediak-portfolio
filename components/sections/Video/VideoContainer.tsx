@@ -1,6 +1,6 @@
 ﻿import HeroContainer from "@/components/sections/Video/Hero/HeroContainer";
 import PortfolioContainer from "@/components/sections/Video/Portfolio/PortfolioContainer";
-import QuoteContainer from "@/components/sections/Video/Quote/QuoteContainer";
+import ParallaxContainer from "@/components/sections/Video/Parallax/ParallaxContainer";
 import ServicesContainer from "@/components/sections/Video/Services/ServicesContainer";
 import CtaContainer from "@/components/sections/Video/Cta/CtaContainer";
 
@@ -9,7 +9,7 @@ const VideoContainer = () => {
     <>
       <HeroContainer />
       <PortfolioContainer />
-      <QuoteContainer />
+      <ParallaxContainer />
       <ServicesContainer />
       <CtaContainer />
     </>
