@@ -1,23 +1,17 @@
-﻿import { motion } from "framer-motion";
+﻿"use client";
+
+import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 import React from "react";
+import { useContactForm } from "@/hooks/useContactForm";
 
-type FormFieldsProps = {
-  formData: Record<string, string>;
-  handleSubmit: (e: React.FormEvent) => void;
-  handleChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => void;
-};
+const FormFields = () => {
+  const { errors, loading, formData, handleChange, handleSubmit } =
+    useContactForm();
 
-const FormFields = ({
-  formData,
-  handleSubmit,
-  handleChange,
-}: FormFieldsProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: 30 }}
@@ -25,7 +19,7 @@ const FormFields = ({
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true }}
     >
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6" noValidate>
         <div>
           <label
             htmlFor="name"
@@ -36,12 +30,23 @@ const FormFields = ({
           <Input
             id="name"
             name="name"
+            required
             value={formData.name}
             onChange={handleChange}
-            required
             className="bg-card border-border/50 focus:border-accent"
             autoComplete="name"
+            aria-invalid={errors.name ? "true" : "false"}
+            aria-describedby={errors.name ? "name-error" : undefined}
           />
+          {errors.name && (
+            <span
+              id="name-error"
+              className="font-body mt-1 block text-xs text-red-500"
+              role="alert"
+            >
+              {errors.name}
+            </span>
+          )}
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div>
@@ -55,12 +60,23 @@ const FormFields = ({
               type="email"
               id="email"
               name="email"
+              required
               value={formData.email}
               onChange={handleChange}
-              required
               className="bg-card border-border/50 focus:border-accent"
               autoComplete="email"
+              aria-invalid={errors.email ? "true" : "false"}
+              aria-describedby={errors.email ? "email-error" : undefined}
             />
+            {errors.email && (
+              <span
+                id="email-error"
+                className="font-body mt-1 block text-xs text-red-500"
+                role="alert"
+              >
+                {errors.email}
+              </span>
+            )}
           </div>
           <div>
             <label
@@ -77,7 +93,25 @@ const FormFields = ({
               onChange={handleChange}
               className="bg-card border-border/50 focus:border-accent"
               autoComplete="tel"
+              placeholder="+48 123 456 789"
+              aria-invalid={errors.phone ? "true" : "false"}
+              aria-describedby="phone-hint phone-error"
             />
+            <span
+              id="phone-hint"
+              className="text-muted-foreground/70 mt-1 block text-[11px]"
+            >
+              Musi zaczynać się od numeru kierunkowego np. +48
+            </span>
+            {errors.phone && (
+              <span
+                id="phone-error"
+                className="font-body mt-1 block text-xs text-red-500"
+                role="alert"
+              >
+                {errors.phone}
+              </span>
+            )}
           </div>
         </div>
         <div>
@@ -85,16 +119,28 @@ const FormFields = ({
             htmlFor="eventDate"
             className="text-muted-foreground font-body mb-2 block text-sm"
           >
-            Planowana data wydarzenia
+            Planowana data wydarzenia *
           </label>
           <Input
             type="date"
             id="eventDate"
             name="eventDate"
+            required
             value={formData.eventDate}
             onChange={handleChange}
             className="bg-card border-border/50 focus:border-accent"
+            aria-invalid={errors.eventDate ? "true" : "false"}
+            aria-describedby={errors.eventDate ? "date-error" : undefined}
           />
+          {errors.eventDate && (
+            <span
+              id="date-error"
+              className="font-body mt-1 block text-xs text-red-500"
+              role="alert"
+            >
+              {errors.eventDate}
+            </span>
+          )}
         </div>
         <div>
           <label
@@ -106,21 +152,34 @@ const FormFields = ({
           <Textarea
             id="message"
             name="message"
+            required
             value={formData.message}
             onChange={handleChange}
-            required
             rows={6}
             className="bg-card border-border/50 focus:border-accent resize-none"
-            placeholder="Opowiedz nam o swoim projekcie... Jaki rodzaj sesji Cię interesuje? Kiedy planowane jest wydarzenie?"
+            placeholder="Opowiedz nam o swoim projekcie... Jaki rodzaj sesji Cię interesuje?"
+            aria-invalid={errors.message ? "true" : "false"}
+            aria-describedby={errors.message ? "message-error" : undefined}
           />
+          {errors.message && (
+            <span
+              id="message-error"
+              className="font-body mt-1 block text-xs text-red-500"
+              role="alert"
+            >
+              {errors.message}
+            </span>
+          )}
         </div>
         <Button
           type="submit"
           size="lg"
-          className="w-full cursor-pointer shadow-[0_0_8px_var(--color-shadow-glow)] md:w-auto"
+          variant="secondary"
+          disabled={loading}
+          className="flex w-full cursor-pointer items-center justify-center gap-2 shadow-[0_0_8px_var(--color-shadow-glow)] md:w-auto"
         >
-          Wyślij Wiadomość
-          <Send className="ml-2" size={18} />
+          {loading ? "Wysyłanie..." : "Wyślij Wiadomość"}
+          {!loading && <Send size={18} aria-hidden="true" />}
         </Button>
       </form>
     </motion.div>
