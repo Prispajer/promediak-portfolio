@@ -1,5 +1,9 @@
-﻿import { Metadata } from "next";
+﻿import { Metadata, Viewport } from "next";
 import ContactContainer from "@/components/sections/Contact/ContactContainer";
+
+export const viewport: Viewport = {
+  themeColor: "#18251f",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -9,7 +13,6 @@ export const metadata: Metadata = {
   description:
     "Masz pytania dotyczące filmu lub sesji? Skontaktuj się z ProMediak już dziś. Napisz lub zadzwoń, zapytaj o wolny termin i stwórzmy razem coś pięknego.",
   robots: "index, follow",
-  themeColor: "#18251f",
   applicationName: "ProMediak",
   appleWebApp: {
     title: "ProMediak",

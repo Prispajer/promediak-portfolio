@@ -1,5 +1,9 @@
-﻿import { Metadata } from "next";
+﻿import { Metadata, Viewport } from "next";
 import VideoContainer from "@/components/sections/Video/VideoContainer";
+
+export const viewport: Viewport = {
+  themeColor: "#18251f",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -7,9 +11,8 @@ export const metadata: Metadata = {
   ),
   title: "Realizacje Video | Profesjonalne Filmy ProMediak",
   description:
-    "Zobacz nasze portfolio wideo. Tworzymy unikalne filmy ślubne, dynamiczne highlighty oraz artystyczne teledyski, które zatrzymają Twoje najpiękniejsze emocje.",
+    "Portfolio Video ProMediak: Unikalne emocje. Każdy projekt to indywidualna historia. Zobacz nasze realizacje i przekonaj się o jakości, którą oferujemy.",
   robots: "index, follow",
-  themeColor: "#18251f",
   applicationName: "ProMediak",
   appleWebApp: {
     title: "ProMediak",

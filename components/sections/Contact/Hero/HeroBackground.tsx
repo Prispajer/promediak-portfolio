@@ -1,4 +1,4 @@
-﻿import heroImage from "@/public/images/ContactHero.jpg";
+﻿import heroImage from "@/public/assets/content/ContactHero.jpg";
 import React from "react";
 import ImageBackground from "@/components/common/ImageBackground";
 

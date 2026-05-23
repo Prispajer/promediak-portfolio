@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import heroImage from "@/public/images/ContactParallax.jpg";
+import heroImage from "@/public/assets/content/ContactParallax.jpg";
 import { motion } from "framer-motion";
 import ParallaxSection from "@/components/common/ParallaxSection";
 import React from "react";

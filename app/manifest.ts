@@ -12,9 +12,28 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#18251f",
     icons: [
       {
-        src: "/icon.png",
+        src: "/assets/branding/android-144.png",
+        sizes: "144x144",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/assets/branding/android-192.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/assets/branding/android-512.png",
         sizes: "512x512",
         type: "image/png",
+        purpose: "any",
+      },
+      {
+        src: "/assets/branding/maskable-icon-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
       },
     ],
   };

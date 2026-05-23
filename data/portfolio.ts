@@ -2,7 +2,7 @@
 
 export const photoItems: PhotoItem[] = Array.from({ length: 31 }, (_, i) => ({
   id: String(i + 1),
-  image: `/images/portfolio/${i + 1}.jpg`,
+  image: `/assets/portfolio/${i + 1}.jpg`,
   title: `Zdjęcie ${i + 1}`,
   category: "Wybrane realizacje",
 }));

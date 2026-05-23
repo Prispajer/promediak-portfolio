@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import ParallaxSection from "@/components/common/ParallaxSection";
-import parallaxImage from "@/public/images/PhotoParallax.jpg";
+import parallaxImage from "@/public/assets/content/PhotoParallax.jpg";
 
 const ParallaxContainer = () => {
   return (

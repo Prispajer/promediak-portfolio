@@ -1,9 +1,9 @@
 ﻿"use client";
 
-import preview1 from "@/public/images/portfolio/20.jpg";
-import preview2 from "@/public/images/portfolio/19.jpg";
-import preview3 from "@/public/images/portfolio/15.jpg";
-import preview4 from "@/public/images/portfolio/10.jpg";
+import preview1 from "@/public/assets/portfolio/20.jpg";
+import preview2 from "@/public/assets/portfolio/19.jpg";
+import preview3 from "@/public/assets/portfolio/15.jpg";
+import preview4 from "@/public/assets/portfolio/10.jpg";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

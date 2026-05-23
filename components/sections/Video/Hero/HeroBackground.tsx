@@ -1,4 +1,4 @@
-﻿import heroImage from "@/public/images/VideoHero.jpg";
+﻿import heroImage from "@/public/assets/content/VideoHero.jpg";
 import ImageBackground from "@/components/common/ImageBackground";
 
 const HeroBackground = () => {

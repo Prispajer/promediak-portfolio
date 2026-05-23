@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ParallaxSection from "@/components/common/ParallaxSection";
-import heroImage from "@/public/images/HomeHero.jpg";
+import heroImage from "@/public/assets/content/HomeHero.jpg";
 
 const CtaContainer = () => {
   return (

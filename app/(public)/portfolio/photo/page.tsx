@@ -1,5 +1,9 @@
-﻿import { Metadata } from "next";
+﻿import { Metadata, Viewport } from "next";
 import PhotoContainer from "@/components/sections/Photo/PhotoContainer";
+
+export const viewport: Viewport = {
+  themeColor: "#18251f",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -7,9 +11,8 @@ export const metadata: Metadata = {
   ),
   title: "Sesje Fotograficzne | ProMediak artystyczne zdjęcia",
   description:
-    "Profesjonalna fotografia ślubna, artystyczne sesje plenerowe oraz reportaże okolicznościowe. Zobacz zdjęcia ProMediak, które zatrzymają Twoje najpiękniejsze wspomnienia.",
+    "Portfolio Fotografia ProMediak: Artystyczne sesje i profesjonalny reportaż. Zobacz nasze ujęcia, które zatrzymają Twoje najpiękniejsze wspomnienia na lata.",
   robots: "index, follow",
-  themeColor: "#18251f",
   applicationName: "ProMediak",
   appleWebApp: {
     title: "ProMediak",

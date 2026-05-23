@@ -1,5 +1,5 @@
 ﻿import Image from "next/image";
-import heroImage from "@/public/images/PhotoHero.jpg";
+import heroImage from "@/public/assets/content/PhotoHero.jpg";
 
 const HeroBackground = () => {
   return (
