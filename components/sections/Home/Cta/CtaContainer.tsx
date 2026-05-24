@@ -10,7 +10,7 @@ const CtaContainer = () => {
   return (
     <ParallaxSection
       backgroundImage={heroImage}
-      height="30vh"
+      height="40vh"
       ariaLabel="Sekcja kontaktowa"
     >
       <div className="container mx-auto px-6 py-20">

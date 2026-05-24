@@ -4,7 +4,7 @@ import PhilosophyOverlay from "@/components/sections/Home/Philosophy/PhilosophyO
 
 const PhilosophyContainer = () => {
   return (
-    <section className="relative overflow-hidden py-24 md:py-32">
+    <section className="relative overflow-hidden py-16 sm:py-24 md:py-32">
       <PhilosophyOverlay />
       <div className="relative container mx-auto px-6">
         <SectionTitle
