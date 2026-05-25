@@ -1,11 +1,4 @@
-﻿import { Camera, Film, Star, Heart, Award } from "lucide-react";
-
-export const stats = [
-  { icon: Heart, number: "150+", label: "Wykonanych Realizacji" },
-  { icon: Award, number: "15", label: "Lat Doświadczenia" },
-  { icon: Star, number: "100%", label: "Zadowolonych Klientów" },
-] as const;
-
+﻿import { Camera, Film } from "lucide-react";
 export const services = [
   {
     icon: Camera,

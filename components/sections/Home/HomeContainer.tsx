@@ -1,5 +1,4 @@
 import HeroContainer from "@/components/sections/Home/Hero/HeroContainer";
-import StatsContainer from "@/components/sections/Home/Stats/StatsContainer";
 import ServicesContainer from "@/components/sections/Home/Services/ServicesContainer";
 import PortfolioContainer from "@/components/sections/Home/Portfolio/PortfolioContainer";
 import CtaContainer from "@/components/sections/Home/Cta/CtaContainer";
@@ -10,7 +9,6 @@ const HomeContainer = () => {
   return (
     <>
       <HeroContainer />
-      <StatsContainer />
       <ServicesContainer />
       <ParallaxContainer />
       <PortfolioContainer />
