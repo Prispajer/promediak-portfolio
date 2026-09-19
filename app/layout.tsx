@@ -69,7 +69,7 @@ export const metadata: Metadata = {
         url: "/assets/branding/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Studio Filmowe ProMediak Portfolio",
+        alt: "Studio Filmowe ProMediak",
       },
     ],
   },
@@ -81,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body>{children}</body>
     </html>
   );
