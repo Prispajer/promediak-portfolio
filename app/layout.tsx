@@ -7,9 +7,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.SITE_URL || "http://localhost:3000",
-  ),
+  metadataBase: new URL(process.env.SITE_URL || "http://localhost:3000"),
+  verification: {
+    google: "6ZvPClBQHUTip47ujCjncw1LvWq97UCsWK-na5-S_g4",
+  },
   robots: "index, follow",
   applicationName: "ProMediak",
   appleWebApp: {
